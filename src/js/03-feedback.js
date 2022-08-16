@@ -15,7 +15,7 @@ document.addEventListener('submit', clearForm);
 
 
 function startFormFullfilling(LOCAL_STORAGE_KEY, LOCAL_STORAGE_DATA, inputEl, textareaEl) {
-    const inputData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    const inputData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));    
 
     if (inputData?.email) {    
         inputEl.value = inputData.email;
@@ -40,10 +40,9 @@ function saveDataToLocaleStorage(e) {
 }
 
 function clearForm(e) {
-    e.preventDefault();
+    e.preventDefault();    
 
-    console.log(`email: ${e.target.email.value}`);
-    console.log(`message: ${e.target.message.value}`);
+    console.log(LOCAL_STORAGE_DATA);
 
     e.target.reset();
     localStorage.clear(LOCAL_STORAGE_KEY);
