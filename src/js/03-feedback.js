@@ -42,8 +42,8 @@ function saveDataToLocaleStorage(e) {
 function clearForm(e) {
     e.preventDefault();    
 
-    console.log(LOCAL_STORAGE_DATA);
+    console.log(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)));
 
-    e.target.reset();
+    e.target.reset(); 
     localStorage.clear(LOCAL_STORAGE_KEY);
 }
